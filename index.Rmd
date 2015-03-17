@@ -4,9 +4,9 @@
   <font color="#deebf7">r</font><font color="#3182bd">a</font><font color="#9ecae1">qua</font><font color="#3182bd">m<font color="#9ecae1">aps</font>
 </h1>
 
-raquamaps is an R package providing a number of functions that make it easier to produce Aqua Maps - model-based large-scale predictions of natural occurrences of marine species. This package can be used in an IDE like RStudio or from an application like QGIS or the embedded UI can be used directly from a web browser in order to generate predicted distribution maps for marine species.
+`raquamaps` is an R package providing a number of functions that make it easier to produce Aqua Maps - model-based large-scale predictions of natural occurrences of marine species. This package can be used in an IDE like RStudio or from an application like QGIS or the embedded UI can be used directly from a web browser in order to generate predicted distribution maps for marine species.
 
-It's already possible to generate Aqua Maps with existing tools from aquamaps.org, but the raquamaps Rpackage offers an open source alternative to the earlier MS Access based solution, which simplifies licensing issues and creates a solution which is easier to maintain and develop further.
+It's already possible to generate Aqua Maps with existing tools from http://aquamaps.org, but the raquamaps R package offers an open source alternative to the earlier MS Access based solution, which simplifies sharing and collaboration, clarifies licensing and creates a solution which is easier to maintain and develop further.
 
 ## How does it work?
 
@@ -18,14 +18,17 @@ If you want to install the latest version of the raquamaps package from github, 
 
 ```console
  # if you do not yet have it, install it with
+ 
 install.packages("devtools") 
 
 # install the raquamaps package from github with this command
 # which may require RCurl, if so you can first install RCurl with ...
 # install.packages("RCurl")
+
 install_github("raquamaps/raquamaps")  
 
 # ... or you could install without the RCurl requirement with this:
+
 install_git("https://github.com/raquamaps/raquamaps.git")
 ```
 

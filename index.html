@@ -58,8 +58,8 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <font color="#deebf7">r</font><font color="#3182bd">a</font><font color="#9ecae1">qua</font><font color="#3182bd">m<font color="#9ecae1">aps</font>
 </h1>
 
-<p>raquamaps is an R package providing a number of functions that make it easier to produce Aqua Maps - model-based large-scale predictions of natural occurrences of marine species. This package can be used in an IDE like RStudio or from an application like QGIS or the embedded UI can be used directly from a web browser in order to generate predicted distribution maps for marine species.</p>
-<p>It’s already possible to generate Aqua Maps with existing tools from aquamaps.org, but the raquamaps Rpackage offers an open source alternative to the earlier MS Access based solution, which simplifies licensing issues and creates a solution which is easier to maintain and develop further.</p>
+<p><code>raquamaps</code> is an R package providing a number of functions that make it easier to produce Aqua Maps - model-based large-scale predictions of natural occurrences of marine species. This package can be used in an IDE like RStudio or from an application like QGIS or the embedded UI can be used directly from a web browser in order to generate predicted distribution maps for marine species.</p>
+<p>It’s already possible to generate Aqua Maps with existing tools from <a href="http://aquamaps.org">http://aquamaps.org</a>, but the raquamaps R package offers an open source alternative to the earlier MS Access based solution, which simplifies sharing and collaboration, clarifies licensing and creates a solution which is easier to maintain and develop further.</p>
 <div id="how-does-it-work" class="section level2">
 <h2>How does it work?</h2>
 <p>The model uses estimates of environmental preferences with respect to depth, water temperature, salinity, primary productivity, and association with sea ice or coastal areas. These estimates of species preferences, called environmental envelopes, are derived from large sets of occurrence data available from online collection databases.</p>
@@ -68,14 +68,17 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h2>Installing from github</h2>
 <p>If you want to install the latest version of the raquamaps package from github, you can do it like so:</p>
 <pre class="console"><code> # if you do not yet have it, install it with
+ 
 install.packages(&quot;devtools&quot;) 
 
 # install the raquamaps package from github with this command
 # which may require RCurl, if so you can first install RCurl with ...
 # install.packages(&quot;RCurl&quot;)
+
 install_github(&quot;raquamaps/raquamaps&quot;)  
 
 # ... or you could install without the RCurl requirement with this:
+
 install_git(&quot;https://github.com/raquamaps/raquamaps.git&quot;)</code></pre>
 </div>
 <div id="building" class="section level2">
