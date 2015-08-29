@@ -1,0 +1,108 @@
+---
+title: "raquamaps - An R package for predicting occurrences of marine species"
+author: "Markus Skyttner"
+date: "August 29, 2015"
+output: 
+  ioslides_presentation:
+    logo: https://upload.wikimedia.org/wikipedia/commons/d/d1/Fblogo.jpg
+    transition: slower
+---
+
+##    
+
+![Fishbase 13th](http://1.bp.blogspot.com/-QJwHzJxdGGE/Vc1fhl-pSrI/AAAAAAAAAH4/nNCg1ilcjaM/s640/letterhead.jpg)
+
+    Tuesday, 1 September 2015, 12:05-12:25
+    13th Annual FishBase Symposium
+    FishBase and SeaLifeBase for Teaching and Research in Aquatic Science
+    Havener Auditorium, Chandler Hall, IRRI    
+    
+    Keyboard shortcuts for presentation viewing mode:
+
+    'f' enable fullscreen mode 
+    'w' toggle widescreen mode
+    'o' enable overview mode
+    'h' enable code highlight mode
+    'p' show presenter notes
+
+## About me
+
+```{r, echo=FALSE, message=FALSE, fig.width=1, fig.height=1}
+library("jpeg")
+library("png")
+library("grid")
+library("httr")
+
+pic <- "http://player.slideplayer.se/7/1945435/data/images/img4.jpg"
+
+gray_plot <- function(pic) {
+  library("raster")
+  # http://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/
+  ci <- content(GET(pic))
+  rgb <- getValues(brick(ci))
+  gray_vals <- rgb[ ,1] * 0.21 + rgb[ ,2] * 0.72 + rgb[ ,3] * 0.07
+  m <- matrix(gray_vals, ncol = ncol(ci), nrow = nrow(ci), byrow = TRUE)
+  return (m)
+}
+
+grid.raster(gray_plot(pic))
+
+```
+  
+Database developer working at the Swedish Museum for Natural History in the biodiversity informatics section of the research department. 
+
+The work on the `raquamaps` R package has been supported by the EUBON project. Joint work with Onésime Prud'homme, Kathleen Reyes, Cristina Garilao and others.
+
+These web slides are available online (including [sources](https://github.com/raquamaps/raquamaps.github.io/raquamaps-fb13.Rmd)):  
+https://raquamaps.github.io/raquamaps-fb13.html
+
+
+## What are Aqua Maps
+
+Aqua Maps -- see http://aquamaps.org -- are model-based large-scale predictions of natural occurrences of marine species. 
+
+Origin: `Kaschner, K., J. Rius-Barile, K. Kesner-Reyes, C. Garilao, S.O. Kullander, T. Rees, and R. Froese. 2013. AquaMaps: Predicted range maps for aquatic species. World wide web electronic publication, www.aquamaps.org, Version 08/2013.`
+
+"Environmental envelopes" - The default prediction model uses estimates of environmental preferences with respect to depth, water temperature, salinity, primary productivity, and association with sea ice or coastal areas.
+
+## Why use R for Aqua Maps?
+
+For the "Open Science" approach. A vibrant community of millions of data scientists use R often through RStudio as their favorite platform for end-to-end reproducable research work.
+
+![Open Science](https://upload.wikimedia.org/wikipedia/commons/9/9c/Open_Science_-_Prinzipien.png)
+
+## Current Status
+
+- Bundles a range of various reference data sets in the package
+- Developed on Linux - now being tested on Windows and Mac
+- Can do batch calculations
+- Workflows for marine versus freshwater realms
+
+Long form documentation providing a tutorial that outlines common usage and workflows - a so called Vignette - is available in the package and also online:
+    - https://raquamaps.github.io/raquamaps-intro.html
+
+## Future directions
+
+- Adding shiny web UI with visualizations
+- Adding quarter-degree cell resolutions - support for finer grids
+- Adding support to get environmental layers from suitable online sources
+- Bug fixing / Quality Assurance - comparison with aquamaps.org results
+- Vagrant project "gisbox-server" - showing integration with qgis server etc
+
+Getting ready for `ropensci`? See amazing tools for reproducible research at https://ropensci.org/
+
+## Getting the software and using it
+
+- Getting started instructions at https://raquamaps.github.io/
+- Open source license, free use, get the code at https://github.com/raquamaps
+- Use on Linux, Windows or Macs from apps like RStudio, Quantum GIS
+- Open access to code and your contributions and collaboration is welcome!
+
+## Developer contributions to `raquamaps`
+
+- R package created to support workflows in Aqua Maps scenarios, attempts to follow guidelines from professor Hadley Wickham regarding R package development
+    - Guidelines for Advanced R: https://adv-r.had.co.nz/
+    - Guidelines for R package dvelopment: https://r-pkgs.had.co.nz/
+- The sources (under AGLPv3) and a web site informing about installation procedure are available at github - open access, free use
+    - https://github.com/raquamaps
+    - https://raquamaps.github.io
