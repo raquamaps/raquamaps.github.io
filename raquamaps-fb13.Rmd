@@ -53,7 +53,7 @@ Database developer working at the Swedish Museum for Natural History in the biod
 
 The work on the `raquamaps` R package has been supported by the EUBON project. Joint work with Onésime Prud'homme, Kathleen Reyes, Cristina Garilao and others.
 
-These web slides are available online (including [sources](https://github.com/raquamaps/raquamaps.github.io/raquamaps-fb13.Rmd)):  
+These web slides are available online (including [sources](https://github.com/raquamaps/raquamaps.github.io)):  
 https://raquamaps.github.io/raquamaps-fb13.html
 
 
