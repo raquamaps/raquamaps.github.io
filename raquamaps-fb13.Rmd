@@ -16,14 +16,15 @@ output:
     13th Annual FishBase Symposium
     FishBase and SeaLifeBase for Teaching and Research in Aquatic Science
     Havener Auditorium, Chandler Hall, IRRI    
-    
+  
     Keyboard shortcuts for presentation viewing mode:
 
     'f' enable fullscreen mode 
     'w' toggle widescreen mode
     'o' enable overview mode
-    'h' enable code highlight mode
-    'p' show presenter notes
+
+![EUBON](./eubon-600.png)
+
 
 ## About me
 
